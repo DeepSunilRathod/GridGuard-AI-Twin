@@ -1,0 +1,18 @@
+
+:root {
+  color: #17243a;
+  background: #f5f7fb;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+#root {
+  min-height: 100vh;
+}

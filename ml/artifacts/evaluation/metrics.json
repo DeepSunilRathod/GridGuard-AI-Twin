@@ -1,0 +1,35 @@
+{
+  "model": "1D CNN + LSTM",
+  "evaluation_type": "provisional held-out 20% of ordered CSV windows",
+  "sequence_length": 10,
+  "features": 14,
+  "test_samples": 199,
+  "accuracy": 0.8994974874371859,
+  "balanced_accuracy": 0.7326023391812866,
+  "fault_precision": 0.47619047619047616,
+  "fault_recall": 0.5263157894736842,
+  "fault_f1": 0.5,
+  "confusion_matrix": {
+    "labels": [
+      "Normal (0)",
+      "Fault (1)"
+    ],
+    "matrix": [
+      [
+        169,
+        11
+      ],
+      [
+        9,
+        10
+      ]
+    ],
+    "interpretation": {
+      "true_normal_pred_normal": 169,
+      "false_alarm_normal_pred_fault": 11,
+      "missed_fault_fault_pred_normal": 9,
+      "detected_fault_fault_pred_fault": 10
+    }
+  },
+  "caveat": "CSV has no verified timestamp/asset sequence; verify the original training split and temporal ordering before presenting these metrics as final."
+}

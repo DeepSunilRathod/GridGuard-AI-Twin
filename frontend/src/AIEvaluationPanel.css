@@ -1,0 +1,91 @@
+/* AI evaluation panel */
+.gg-evaluation-panel { padding:20px; }
+.gg-eval-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.gg-eval-heading h2 { display:flex; align-items:center; gap:8px; margin:0 0 6px; }
+.gg-eval-heading p { margin:0; color:#64748b; font-size:13px; }
+.gg-eval-heading button { display:flex; align-items:center; gap:7px; border:1px solid #d7e0ed; border-radius:9px; padding:9px 12px; background:white; cursor:pointer; }
+.gg-eval-metrics { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:10px; margin:18px 0 22px; }
+.gg-eval-metric { display:flex; flex-direction:column; gap:8px; padding:13px; border:1px solid #e2e8f0; border-radius:11px; }
+.gg-eval-metric span { color:#64748b; font-size:11px; }
+.gg-eval-metric strong { color:#172b4d; font-size:21px; }
+.gg-evaluation-panel h3 { margin:10px 0; font-size:15px; }
+.gg-confusion-wrap { overflow-x:auto; }
+.gg-confusion { width:100%; border-collapse:collapse; text-align:center; }
+.gg-confusion th,.gg-confusion td { padding:12px; border:1px solid #e2e8f0; }
+.gg-confusion th { background:#f8fafc; font-size:12px; }
+.gg-confusion td { font-size:18px; font-weight:700; }
+.gg-eval-sample { color:#64748b; font-size:12px; margin-top:12px; }
+.gg-eval-caveat { margin-top:14px; padding:12px; background:#fff7ed; border-radius:9px; color:#9a3412; font-size:12px; }
+.gg-eval-caveat p { margin:5px 0 0; line-height:1.5; }
+.gg-eval-error { display:flex; gap:9px; margin-top:15px; padding:12px; background:#fff1f2; color:#9f1239; border-radius:9px; font-size:13px; }
+.gg-eval-error p { margin:6px 0 0; }
+.gg-evaluation-panel details { margin-top:12px; }
+.gg-evaluation-panel pre { overflow:auto; background:#f8fafc; padding:12px; border-radius:8px; }
+@media(max-width:800px) { .gg-eval-metrics { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+
+
+
+/* Keep the evaluation panel at a sensible width */
+.ai-evaluation-panel {
+  width: 100%;
+  max-width: 1100px;
+  min-width: 0;
+  margin: 24px auto;
+  box-sizing: border-box;
+}
+
+/* Arrange metric cards in a proper grid */
+.evaluation-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.evaluation-metric {
+  min-width: 0;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
+}
+
+.evaluation-metric .metric-label {
+  display: block;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.evaluation-metric .metric-value {
+  display: block;
+  font-size: clamp(18px, 2vw, 26px);
+  line-height: 1.2;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Keep the confusion matrix readable */
+.confusion-matrix {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+
+.confusion-matrix th,
+.confusion-matrix td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .evaluation-metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .evaluation-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

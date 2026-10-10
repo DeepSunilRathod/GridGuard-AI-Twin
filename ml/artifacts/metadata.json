@@ -1,0 +1,25 @@
+{
+  "target": "Fault_Status",
+  "sequence_length": 10,
+  "feature_columns": [
+    "Voltage(V)",
+    "Current(A)",
+    "Temperature(C)",
+    "Frequency(Hz)",
+    "Power_Factor",
+    "Vibration_Level",
+    "Device_Age(Years)",
+    "Terminal_Efficiency(%)",
+    "Load_Variation(%)",
+    "Signal_Strength(dB)",
+    "Apparent_Power(kVA)",
+    "Real_Power(kW)",
+    "Energy_Consumed(kWh)",
+    "Anomaly_Score"
+  ],
+  "class_labels": {
+    "0": "Normal",
+    "1": "Fault"
+  },
+  "sequence_order_verified": false
+}
